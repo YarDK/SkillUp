@@ -10,13 +10,7 @@ public class StringClass {
         this.name = name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        StringClass that = (StringClass) o;
-        return Objects.equals(name, that.name);
-    }
+
 
     @Override
     public int hashCode() {
@@ -25,15 +19,15 @@ public class StringClass {
     }
 
     public static void main(String[] args) {
-        hashSetSkill();
-        //hashMapSkill();
+        //hashSetSkill();
+        hashMapSkill();
         //hashCodAndEqualSkill();
     }
 
     public static void hashMapSkill(){
         Map<StringClass, String> hashmap = new HashMap<>();
 
-        StringClass obj = new StringClass("4");
+        StringClass obj = new StringClass("1");
 
         hashmap.put(new StringClass("1"), "Лидия Аркадьевна Бубликова");
         hashmap.put(new StringClass("2"), "Иван Михайлович Серебряков");
@@ -69,6 +63,8 @@ public class StringClass {
             System.out.println("Hash code obj1: " + obj1.hashCode() + ", hash code obj: " + obj.hashCode());
             System.out.println(obj1.equals(obj));
         }
+
+        System.out.println(15 & 2);
 
         //System.out.println(hashSet.iterator().next().equals(hashSet.iterator().next()));
     }
